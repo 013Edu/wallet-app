@@ -23,7 +23,9 @@ export const Description = styled.Text`
     font-size:${RFValue(15)}px;
 `
 export const ViewButton = styled.View`
-    flex-direction: row;    
+    flex-direction: row;  
+    justify-content: center;
+    width: 100%;
 `
 export const ContentBody = styled.View`
 `
