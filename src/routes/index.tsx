@@ -8,7 +8,7 @@ import { NavigationContainer } from '@react-navigation/native';
 const Routes: React.FC = () => {
   return (
     <NavigationContainer>
-        <AuthRoutes />
+        <AppRoutes />
     </NavigationContainer>
   )
 }

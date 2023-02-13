@@ -15,10 +15,17 @@ import {
   Title2,
 } from './style';
 import Button from '../../../components/Button';
+import { useNavigation } from '@react-navigation/native';
 
 const Cadastro: React.FC = () => {
 
   const theme = useTheme()
+
+  const navigation = useNavigation()
+
+  const handleVoltarLogin = () => {
+    navigation.navigate('Login')
+  }
 
   return (
     <Container>
@@ -78,7 +85,7 @@ const Cadastro: React.FC = () => {
        }}
        />
        <ContentFooter>
-        <ContentButton>
+        <ContentButton onPress={handleVoltarLogin}>
           <Title1>Já tem conta?</Title1>
           <Title2>Logar-se</Title2>
         </ContentButton>

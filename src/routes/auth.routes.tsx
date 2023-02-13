@@ -12,7 +12,7 @@ const AuthRoutes: React.FC = () => {
 
   return (
         <Navigator
-        initialRouteName='Cadastro'
+        initialRouteName='Login'
         screenOptions={{
             headerShown: false,
         }}
@@ -21,7 +21,7 @@ const AuthRoutes: React.FC = () => {
                 name='Login' component={Login}
             />
             <Screen 
-                name='Cadastro' component={Cadastro} options={{headerShown: true}}
+                name='Cadastro' component={Cadastro} options={{headerShown: false}}
             />
             <Screen 
                 name='RecuperarSenha' component={RecuperarSenha}
