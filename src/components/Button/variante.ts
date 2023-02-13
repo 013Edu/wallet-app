@@ -29,7 +29,7 @@ const buttonPrimary: ButtonVariant = {
             color: theme.COLORS.WHITE
         },
         icon: {
-            color: theme.COLORS.WHITE
+            color: theme.COLORS.GRAY4
         },
     },
     disable: {
@@ -99,8 +99,34 @@ const buttonBlack: ButtonVariant = {
     }
 }
 
+const buttonTransparent: ButtonVariant = {
+    enable: {
+        button: {
+            backgroundColor: 'transparent'
+        },
+        title: {
+            color: theme.COLORS.GRAY4
+        },   
+        icon: {
+            color: theme.COLORS.GRAY4
+        },
+    },
+    disable: {
+        button: {
+            backgroundColor: 'transparent'
+        },
+        title: {
+            color: theme.COLORS.GRAY4
+        },
+        icon: {
+            color: theme.COLORS.GRAY4
+        },
+    }
+}
+
 export const variants = {
    primary: buttonPrimary,
    outline: buttonOutline,
-   black: buttonBlack
+   black: buttonBlack,
+   transparent: buttonTransparent
 }

@@ -10,7 +10,7 @@ export const Containerasd = styled.View`
     justify-content: center;
     flex-direction: row;
     align-items: center;
-    background-color: ${({theme}) => theme.COLORS.GRAY6};
+    background-color: ${({theme}) => theme.COLORS.GRAY5};
 `;
 
 export const InputContainer = styled.TextInput`

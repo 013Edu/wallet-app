@@ -1,6 +1,6 @@
-import { SafeAreaView } from "react-native"
-import ButtonSocial from "../../components/ButtonSocial";
-import ButtonGoogle from "../../components/ButtonGoogle";
+import { SafeAreaView, KeyboardAvoidingView } from "react-native"
+import ButtonSocial from "../../../components/ButtonSocial";
+import ButtonGoogle from "../../../components/ButtonGoogle";
 
 import { 
     Container ,
@@ -10,17 +10,38 @@ import {
     ViewButton,
     ContentBody,
     ContentFooter,
+    TitleSignUp1,
+    TitleSignUp2,
+    ButtonSignUp,
+    ContentForgotPassword,
+    ContentButtonForgotPassword,
+    TitleButtonForgotPassword
+
 } from './style';
-import Input from "../../components/Input";
+
+import Input from "../../../components/Input";
 
 import { useTheme } from "styled-components"
-import Button from "../../components/Button";
+
+import { useNavigation } from "@react-navigation/native";
+
+import Button from "../../../components/Button";
 
 const Login: React.FC = () => {
 
     const { COLORS } = useTheme()
 
+    const navigation = useNavigation()
+
+    const handleCadastro = () => {
+        navigation.navigate("Cadastro")
+    }
+
   return (
+    <KeyboardAvoidingView
+    behavior="position"
+    enabled
+    >
     <SafeAreaView>
         <Container>
             <ContentHeader>
@@ -62,18 +83,31 @@ const Login: React.FC = () => {
                 keyboardType="default"
                 />  
 
+                <ContentForgotPassword>
+                  <ContentButtonForgotPassword>
+                    <TitleButtonForgotPassword>Recuperar senha</TitleButtonForgotPassword>
+                  </ContentButtonForgotPassword>
+                </ContentForgotPassword>
+
                 <Button
                 title="Entrar"
                 onPress={() => {}}
-                 />
+                 />    
+                 
                 
             </ContentBody>
 
             <ContentFooter>
-
+               <ButtonSignUp
+               onPress={handleCadastro}
+               >
+               <TitleSignUp1>Ainda não tem uma conta?</TitleSignUp1>
+                <TitleSignUp2>Cadastre-se</TitleSignUp2>
+               </ButtonSignUp>
             </ContentFooter>
         </Container>
     </SafeAreaView>
+    </KeyboardAvoidingView>
   );
 }
 

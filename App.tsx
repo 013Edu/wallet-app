@@ -14,8 +14,7 @@ import {
   Poppins_800ExtraBold
 } 
 from "@expo-google-fonts/poppins"
-import Login from './src/screens/Login';
-
+import Routes from './src/routes';
 
 export default function App() {
 
@@ -31,13 +30,13 @@ const [fontsLoaded] = useFonts({
 
   return (
    <ThemeProvider theme={COLORS}>
-      <StatusBar 
-      style="dark" 
-      translucent
-      />
-     <View>
-      <Login />
-    </View>
+        <StatusBar 
+          style="dark" 
+          translucent
+          />
+
+          <Routes />
+
    </ThemeProvider>
   );
 }

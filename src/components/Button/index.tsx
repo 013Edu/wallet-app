@@ -15,7 +15,7 @@ import { variants } from "./variante"
     iconName?: keyof typeof AntDesign.glyphMap
     isLoading?: boolean
     disable?: boolean
-    variant?: 'primary' |'outline' |'black' 
+    variant?: 'primary' |'outline' |'black' |'transparent'
     style?: TouchableOpacityProps['style']
  }
 

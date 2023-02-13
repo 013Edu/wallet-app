@@ -13,7 +13,7 @@ export const Button = styled.TouchableOpacity`
     width: ${RFValue(130)}px;
     height: ${RFValue(60)}px;
     border-radius: ${RFValue(5)}px;
-    background-color: ${({theme}) => theme.COLORS.GRAY6};
+    background-color: ${({theme}) => theme.COLORS.GRAY5};
 `;
 
 export const Icone = styled.Image`
