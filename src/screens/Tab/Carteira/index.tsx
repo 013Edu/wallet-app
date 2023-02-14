@@ -23,6 +23,17 @@ import {
   IconPayOut,
   IconTopUp,
   Title,
+  ContentFlat,
+  ContentFlatHeader,
+  ButtonAllView,
+  ButtonTitle,
+  ContentFlatFooter,
+  Icontransaction,
+  DetailsTransaction,
+  NameTransaction,
+  SubtitleTransaction,
+  RiceTransaction,
+  TitleFlat,
 
 } from './style';
 
@@ -48,7 +59,7 @@ const Carteira: React.FC = () => {
           alignItems: 'center'
         }}>
           <IconTransfer source={Transfer} />
-          <Title>Transferencia</Title>
+          <Title>Transferências</Title>
         </TouchableOpacity>
         <TouchableOpacity>
           <IconPayment source={Payment} />
@@ -60,16 +71,30 @@ const Carteira: React.FC = () => {
         </TouchableOpacity>
         <TouchableOpacity>
           <IconTopUp source={TopUp} />
-          <Title>+ Opcoes</Title>
+          <Title>+ Opções</Title>
         </TouchableOpacity>
       </Body>
       <FlatList
         data={transaction}
         renderItem={({ item }) => (
-          <View>
-          
-          </View>
+          <ContentFlatFooter>
+            <Icontransaction source={item.icon} />
+            <DetailsTransaction>
+              <NameTransaction>{item.title}</NameTransaction>
+              <SubtitleTransaction>{item.subtitle}</SubtitleTransaction>
+            </DetailsTransaction>
+            <RiceTransaction>R${item.price}</RiceTransaction>
+          </ContentFlatFooter>
         )}
+
+        ListHeaderComponent={ <ContentFlat>
+          <ContentFlatHeader>
+            <TitleFlat>Minhas Transações</TitleFlat>
+            <ButtonAllView>
+              <ButtonTitle>Ver todos</ButtonTitle>
+            </ButtonAllView>
+          </ContentFlatHeader>
+        </ContentFlat>}
       />
     </Container>
   )

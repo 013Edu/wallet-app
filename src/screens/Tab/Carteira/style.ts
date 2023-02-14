@@ -71,3 +71,56 @@ export const Title = styled.Text`
     color: ${({theme}) => theme.COLORS.PURPLECard};
     font-family: ${({theme}) => theme.FONTS.POPPINSMEDIUM};
 `;
+
+export const ContentFlat = styled.View`
+    padding: 10px 20px;
+    margin-top: 20px;
+`;
+export const ContentFlatHeader = styled.View`
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 10px;
+`;
+export const ButtonAllView = styled.TouchableOpacity`
+
+`;
+
+export const ButtonTitle = styled.Text`
+    font-family: ${({theme}) => theme.FONTS.POPPINSMEDIUM};
+    color: ${({theme}) => theme.COLORS.PURPLECard};
+`;
+
+export const ContentFlatFooter = styled.View`
+    padding: 2px 20px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin-top: -23px;
+`;
+export const Icontransaction = styled.Image`
+    margin-top: 15px;
+`;
+export const DetailsTransaction = styled.View`
+    margin-left: -80px;
+`;
+export const NameTransaction = styled.Text`
+    font-size: 16px;
+    font-family: ${({theme}) => theme.FONTS.POPPINSMEDIUM};
+`;
+export const SubtitleTransaction = styled.Text`
+    font-family: ${({theme}) => theme.FONTS.POPPINSMEDIUM};
+    color: ${({theme}) => theme.COLORS.GRAY4};
+`;
+export const RiceTransaction = styled.Text`
+    font-size: 16px;
+    font-family: ${({theme}) => theme.FONTS.POPPINSMEDIUM};
+    color: ${({theme}) => theme.COLORS.GRAY2}
+`;
+
+export const TitleFlat = styled.Text`
+    font-family: ${({theme}) => theme.FONTS.POPPINSBOLD};
+    color: ${({theme}) => theme.COLORS.BLACK};
+    font-size: 20px;
+`;
