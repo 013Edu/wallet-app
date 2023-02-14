@@ -22,11 +22,11 @@ const TabRoutes: React.FC = () => {
         screenOptions={{
           headerShown: false,
           tabBarShowLabel: false,
-          tabBarInactiveTintColor: theme.COLORS.GRAY4,
-          tabBarActiveTintColor: theme.COLORS.GRAY1,
+          tabBarInactiveTintColor: theme.COLORS.WHITE,
+          tabBarActiveTintColor: theme.COLORS.WHITE,
           tabBarStyle : {
             paddingBottom: 7,
-            backgroundColor: theme.COLORS.GRAY6
+            backgroundColor: theme.COLORS.PURPLECard,
           }
         }}
       >
@@ -40,13 +40,13 @@ const TabRoutes: React.FC = () => {
                <Ionicons 
                name='card'
                size={28}
-               color={focused ? theme.COLORS.GRAY2 : theme.COLORS.GRAY5}
+               color={focused ? theme.COLORS.WHITE : theme.COLORS.WHITE}
              />
             ) : (
               <Ionicons 
               name='card-outline'
               size={28}
-              color={focused ? theme.COLORS.GRAY2 : theme.COLORS.GRAY3}
+              color={focused ? theme.COLORS.WHITE : theme.COLORS.WHITE}
             />
             )}
            </View>
@@ -64,13 +64,13 @@ const TabRoutes: React.FC = () => {
                <Ionicons 
                name='bookmarks'
                size={28}
-               color={focused ? theme.COLORS.GRAY2 : theme.COLORS.GRAY5}
+               color={focused ? theme.COLORS.WHITE : theme.COLORS.WHITE}
              />
             ) : (
               <Ionicons 
               name='bookmarks-outline'
               size={28}
-              color={focused ? theme.COLORS.GRAY2 : theme.COLORS.GRAY3}
+              color={focused ? theme.COLORS.WHITE : theme.COLORS.WHITE}
             />
             )}
            </View>
@@ -88,13 +88,13 @@ const TabRoutes: React.FC = () => {
                <Ionicons 
                name='notifications'
                size={28}
-               color={focused ? theme.COLORS.GRAY2 : theme.COLORS.GRAY5}
+               color={focused ? theme.COLORS.WHITE : theme.COLORS.WHITE}
              />
             ) : (
               <Ionicons 
               name='notifications-outline'
               size={28}
-              color={focused ? theme.COLORS.GRAY2 : theme.COLORS.GRAY3}
+              color={focused ? theme.COLORS.WHITE : theme.COLORS.WHITE}
             />
             )}
            </View>
@@ -112,13 +112,13 @@ const TabRoutes: React.FC = () => {
                <Ionicons 
                name='aperture'
                size={28}
-               color={focused ? theme.COLORS.GRAY2 : theme.COLORS.GRAY5}
+               color={focused ? theme.COLORS.WHITE : theme.COLORS.WHITE}
              />
             ) : (
               <Ionicons 
               name='aperture-outline'
               size={28}
-              color={focused ? theme.COLORS.GRAY2 : theme.COLORS.GRAY3}
+              color={focused ? theme.COLORS.WHITE : theme.COLORS.WHITE}
             />
             )}
            </View>
