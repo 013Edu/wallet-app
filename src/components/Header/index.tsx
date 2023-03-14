@@ -1,5 +1,6 @@
 import React from 'react';
 
+import logo from "../../assets/luffy.jpg"
 import { 
     Container,
     ContentHeader,
@@ -9,14 +10,24 @@ import {
 
 } from './style';
 
-const Header: React.FC = () => {
+ interface iHeader {
+  appName: string
+  textLeft?: boolean
+  avatarRight?: boolean
+}
+
+const Header: React.FC<iHeader> = ({appName, avatarRight, textLeft}) => {
   return (
     <Container>
         <ContentHeader>
-            <AppName>Carteira</AppName>
-            <Status>Ativo</Status>
+            <AppName>{appName}</AppName>
+           {textLeft && (
+             <Status>Ativo</Status>
+           )}
         </ContentHeader>
-            <Avatar source={{uri:'https://github.com/013Edu.png'}} />
+        {avatarRight && (
+              <Avatar source={logo} />
+        )}
     </Container>
   )
 }

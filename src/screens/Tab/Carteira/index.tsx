@@ -40,7 +40,7 @@ import {
 const Carteira: React.FC = () => {
   return (
     <Container>
-      <Header />
+      <Header appName='Carteira' textLeft avatarRight />
       <ContentCard>
         <Card>
           <ContentText1>
