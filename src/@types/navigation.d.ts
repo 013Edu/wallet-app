@@ -4,7 +4,8 @@ export declare global {
         interface RootParamList {
             Login: undefined,
             Cadastro: undefined,
-            RecuperarSenha: undefined
+            RecuperarSenha: undefined,
+            Profile: undefined,
         }
     }
 }

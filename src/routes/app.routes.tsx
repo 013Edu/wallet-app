@@ -1,26 +1,29 @@
 import React from 'react';
 
-import { View } from 'react-native';
-
-import { createNativeStackNavigator } from  "@react-navigation/native-stack"
+import { createNativeStackNavigator } from "@react-navigation/native-stack"
 
 import TabRoutes from './tab.routes';
+import Profile from '../screens/Profile';
 
 const AppRoutes: React.FC = () => {
 
-  const  { Navigator, Screen } = createNativeStackNavigator()
+  const { Navigator, Screen } = createNativeStackNavigator()
 
   return (
-      <Navigator
+    <Navigator
       screenOptions={{
         headerShown: false
       }}
-      >
-        <Screen 
-          name='TabRoutes' 
-          component={TabRoutes} 
-        />
-      </Navigator>
+    >
+      <Screen
+        name='TabRoutes'
+        component={TabRoutes}
+      />
+      <Screen
+        name='Profile'
+        component={Profile}
+      />
+    </Navigator>
   )
 }
 

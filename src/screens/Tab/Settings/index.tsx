@@ -7,20 +7,27 @@ import ButtonConfig from '../../../components/ButtonConfig';
 import { TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from 'styled-components';
+import { useNavigation } from '@react-navigation/native';
 
 const Settings: React.FC = () => {
 
-  const { COLORS } =  useTheme()
+  const { COLORS } = useTheme()
+
+  const navigation = useNavigation()
+
+  const handleGoProfile = () => {
+    navigation.navigate("Profile")
+  }
 
   return (
     <>
       <Header appName='Configuração' />
       <Container>
-        <ButtonConfig title='Profile' icon='person-outline' onPress={() => {}} />
-        <ButtonConfig title='Notificações' icon='notifications-outline' onPress={() => {}} />
-        <ButtonConfig title='Sua Carteira' icon='wallet-outline' onPress={() => {}} />
-        <ButtonConfig title='Configurações de Login' icon='log-in-outline' onPress={() => {}} />
-        <ButtonConfig title='Centro de Ajuda' icon='call-outline' onPress={() => {}} />
+        <ButtonConfig title='Perfil do Usuário' icon='person-outline' onPress={handleGoProfile} />
+        <ButtonConfig title='Notificações' icon='notifications-outline' onPress={() => { }} />
+        <ButtonConfig title='Sua Carteira' icon='wallet-outline' onPress={() => { }} />
+        <ButtonConfig title='Configurações de Login' icon='log-in-outline' onPress={() => { }} />
+        <ButtonConfig title='Centro de Ajuda' icon='call-outline' onPress={() => { }} />
       </Container>
       <ContainerLogout>
         <ContentLogout>

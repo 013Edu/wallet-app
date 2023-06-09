@@ -1,22 +1,22 @@
 import React from 'react';
 import { Ionicons } from "@expo/vector-icons"
 
-import { 
-    Container, 
-    Content, 
-    ContentIcon, 
+import {
+    Container,
+    Content,
+    ContentIcon,
     ContentText,
     ContentButton,
 
- } from './styles';
+} from './styles';
 
- interface IButtonConfig {
+interface IButtonConfig {
     title: string;
     icon: string;
     onPress: () => void;
- }
+}
 
-const ButtonConfig: React.FC<IButtonConfig> = ({icon, onPress, title}) => {
+const ButtonConfig: React.FC<IButtonConfig> = ({ icon, onPress, title }) => {
     return (
         <Container>
             <Content>
@@ -25,7 +25,7 @@ const ButtonConfig: React.FC<IButtonConfig> = ({icon, onPress, title}) => {
                 </ContentIcon>
                 <ContentText>{title}</ContentText>
             </Content>
-            <ContentButton>
+            <ContentButton onPress={onPress}>
                 <Ionicons name='chevron-forward-outline' size={23} />
             </ContentButton>
         </Container>
